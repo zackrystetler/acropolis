@@ -340,7 +340,7 @@ header:after, #locations .card, #locations .card #hours ul, #menu .menu {
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-header:after, #hero h2:after, #menu .menu #tabs:after {
+header:after, #hero h2:after, #menu .menu #tabs:after, footer:before {
   overflow: hidden;
   height: 20px;
   background-image: url(../img/keyBorder.png);
@@ -551,6 +551,10 @@ header nav ul li a svg {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #F8F8F8;
+  background-image: url(../img/column.png);
+  background-size: auto 95%;
+  background-repeat: no-repeat;
+  background-position: 70vw;
 }
 
 #locations .card {
@@ -630,6 +634,11 @@ header nav ul li a svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #F8F8F8;
+  background-image: url(../img/menu-bg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
 }
 
 #menu .menu {
@@ -763,4 +772,20 @@ header nav ul li a svg {
 
 #menu .menu #button {
   margin: 1rem;
+}
+
+footer {
+  width: 100%;
+  min-height: 50px;
+  background-color: #3B65AD;
+  position: relative;
+}
+
+footer:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  background-color: white;
 }
