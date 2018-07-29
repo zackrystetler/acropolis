@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Caesar+Dressing|Open+Sans:300,700");
 html {
   line-height: 1.15;
   /* 1 */
@@ -334,6 +335,432 @@ template {
   display: none;
 }
 
-h1 {
-  color: red;
+header:after, #locations .card, #locations .card #hours ul, #menu .menu {
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+header:after, #hero h2:after, #menu .menu #tabs:after {
+  overflow: hidden;
+  height: 20px;
+  background-image: url(../img/keyBorder.png);
+  background-position-y: bottom;
+  background-size: 15px;
+  background-repeat: repeat-x;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #4D4D4D;
+  font-family: "Open Sans", sans-serif;
+  font-weight: thin;
+}
+
+html {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-family: "Caesar Dressing", cursive;
+  color: #3B65AD;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 1rem;
+  line-height: 1.3rem;
+}
+
+#button {
+  width: 10rem;
+  height: 2.5rem;
+  background-color: #3B65AD;
+  color: white;
+  font-family: "Caesar Dressing", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20%;
+  background-color: white;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  color: #3B65AD;
+  z-index: 10;
+}
+
+header:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100vw;
+  border-bottom: solid 2px #3B65AD;
+  background-color: white;
+}
+
+header + * {
+  margin-top: 78px;
+}
+
+header img {
+  height: 80%;
+}
+
+header nav {
+  width: 300px;
+}
+
+header nav ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+}
+
+header nav ul li a {
+  font-family: "Caesar Dressing", cursive;
+  color: #3B65AD;
+  padding: 0 10px;
+  display: inline-block;
+}
+
+header nav ul li a svg {
+  width: 20px;
+  fill: #3B65AD;
+}
+
+#hero {
+  width: 100%;
+  height: auto;
+  padding: 0 3rem 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(../img/hero-bg.jpg);
+  background-size: cover;
+}
+
+#hero img {
+  width: 100%;
+  padding: 1rem;
+}
+
+#hero h2 {
+  font-family: "Caesar Dressing", cursive;
+  color: #3B65AD;
+  font-size: 3.25rem;
+  position: relative;
+  line-height: 2.5rem;
+  margin: 0 0 4.5rem;
+}
+
+#hero h2:first-line {
+  font-size: 2.5rem;
+}
+
+#hero h2:after {
+  content: '';
+  display: inline-block;
+  width: 50%;
+  height: 20px;
+  position: absolute;
+  bottom: -3rem;
+  left: 25%;
+}
+
+#locations {
+  width: 100%;
+  height: auto;
+  padding: 3rem 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #F8F8F8;
+}
+
+#locations .card {
+  text-align: left;
+  background-color: white;
+  padding: 1rem 0 0;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+#locations .card h3 {
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+#locations .card p {
+  font-size: 0.8rem;
+  margin: 0 1rem;
+}
+
+#locations .card #hours {
+  position: relative;
+  margin: 0 1rem 0.5rem;
+}
+
+#locations .card #hours span {
+  font-size: 0.8rem;
+}
+
+#locations .card #hours ul {
+  font-size: 0.8rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 5;
+}
+
+#locations .card #hours ul.inactive {
+  display: none;
+}
+
+#locations .card #hours ul li {
+  display: block;
+}
+
+#locations .card iframe {
+  width: 100%;
+  height: 200px;
+}
+
+#locations .card #button {
+  margin: 1rem auto 0;
+  width: 100%;
+}
+
+#menu {
+  width: 100%;
+  height: auto;
+  padding: 3rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#menu .menu {
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#menu .menu #tabs {
+  width: 100%;
+  height: 60px;
+  background-color: #3B65AD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+#menu .menu #tabs:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  border-bottom: solid 2px #3B65AD;
+  background-color: white;
+}
+
+#menu .menu #tabs li a {
+  color: white;
+  font-family: "Caesar Dressing", cursive;
+  padding-bottom: 0.25rem;
+}
+
+#menu .menu #tabs li a.active {
+  border-bottom: 2px solid currentColor;
+}
+
+#menu .menu .locationMenu.inactive {
+  display: none;
+}
+
+#menu .menu .locationMenu #menuSections {
+  margin: 2rem 0 0;
+  height: auto;
+  padding: 0 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-bottom: 1px solid lightgrey;
+}
+
+#menu .menu .locationMenu #menuSections li a {
+  height: auto;
+  display: inline-block;
+  margin: 0.5rem;
+  padding-bottom: 0.25rem;
+}
+
+#menu .menu .locationMenu #menuSections li a.active {
+  font-weight: bold;
+  border-bottom: 1px solid currentColor;
+}
+
+#menu .menu .locationMenu #menuItems {
+  width: 80vw;
+  height: auto;
+  margin: 1rem 0;
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#menu .menu .locationMenu #menuItems.inactive {
+  display: none;
+}
+
+#menu .menu .locationMenu #menuItems li {
+  margin: 0 2rem 2rem 0;
+  min-width: 250px;
+  text-align: center;
+}
+
+#menu .menu .locationMenu #menuItems li img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#menu .menu .locationMenu #menuItems li span {
+  font-weight: bold;
+}
+
+#menu .menu .locationMenu #menuItems li p {
+  margin: 0.5rem;
+}
+
+#menu .menu #button {
+  margin: 1rem;
 }
