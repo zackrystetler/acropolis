@@ -11,8 +11,8 @@ Download zip and run index.html or click here:
 http://htmlpreview.github.io/?https://github.com/zackrystetler/acropolis/blob/master/index.html
 
 ## To-do
-- Initial Design - (4hrs)
-- Build static Web Page
+[X] Initial Design - (4hrs)
+[ ] Build static Web Page
     [ ] Header
     [ ] Hero
     [ ] About us/Our Story
@@ -26,31 +26,32 @@ http://htmlpreview.github.io/?https://github.com/zackrystetler/acropolis/blob/ma
     [ ] Fav-icon
     [ ] Google statistics tracking
 
-- Javascript Functionality
+[ ] Javascript Functionality
     [ ] Smooth Scrolling
     [ ] Menu page
     [ ] Google maps API
     [ ] Hours drop down
     [ ] Instagram API
 
-- Implement Wordpress
+[ ] Implement Wordpress
     [ ] Header
     [ ] Footer
     [ ] Functions
     [ ] Home Page
     [ ] Our Story
-    - Custom post types
-        - Locations
+    [ ] Custom post types
+        [ ] Locations
             [ ] Maps
             [ ] Hours
-        - Menu
-            - Strathmore
+        [ ] Menu
+            [ ] Strathmore
                 [ ] Souvlaki
                 [ ] Burgers
                 [ ] Meals
                 [ ] Salads
                 [ ] Fish n Chips
-            - Press Hall
+
+            [ ] Press Hall
                 [ ] Souvlaki
                 [ ] Burgers
                 [ ] Meals

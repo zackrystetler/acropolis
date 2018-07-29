@@ -1,1 +1,1 @@
-//ig client id=7fcf52f7bdc046bdadad9fdd9b735f25
+console.log('test');
