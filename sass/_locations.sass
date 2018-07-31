@@ -9,50 +9,66 @@
     justify-content: center
     background-color: $off-white
     background-image: url(../img/column.png)
-    background-size: auto 95%
+    background-size: auto 80%
     background-repeat: no-repeat
     background-position: 70vw
 
-    .card
-        text-align: left
-        @extend %box-shadow
-        background-color: white
-        padding: 1rem 0 0
-        margin: 1rem 0
+    p
+        max-width: 500px
+
+    .locationContainer
         width: 100%
+        height: auto
+        text-align: center
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
 
-        h3
-            font-size: 1rem
-            margin: 0 1rem
-        p
-            font-size: 0.8rem
-            margin: 0 1rem
+        .card
+            text-align: left
+            @extend %box-shadow
+            background-color: white
+            padding: 1rem 0 0
+            margin: 1rem
+            width: 100%
+            max-width: 400px
 
-        #hours
-            position: relative
-            margin: 0 1rem 0.5rem
-            span
+            h3
+                font-size: 1rem
+                margin: 0 1rem
+            p
                 font-size: 0.8rem
-            ul
-                font-size: 0.8rem
-                background-color: white
-                display: flex
-                flex-direction: column
-                padding: 0.5rem
-                @extend %box-shadow
-                position: absolute
-                z-index: 5
+                margin: 0 1rem
 
-                &.inactive
-                    display: none
+            #hours
+                position: relative
+                margin: 0 1rem 0.5rem
+                span
+                    font-size: 0.8rem
+                ul
+                    font-size: 0.8rem
+                    background-color: white
+                    display: flex
+                    flex-direction: column
+                    padding: 0.5rem
+                    @extend %box-shadow
+                    position: absolute
+                    z-index: 5
+
+                    &.inactive
+                        display: none
+                
+
+                    li
+                        display: block
+            iframe
+                width: 100%
+                height: 200px
             
+            #button
+                margin: 1rem auto 0
+                width: 100%
 
-                li
-                    display: block
-        iframe
-            width: 100%
-            height: 200px
-        
-        #button
-            margin: 1rem auto 0
-            width: 100%
+    

@@ -335,12 +335,12 @@ template {
   display: none;
 }
 
-header:after, #locations .card, #locations .card #hours ul, #menu .menu {
+header:after, #locations .locationContainer .card, #locations .locationContainer .card #hours ul, #menu .menu {
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-header:after, #hero h2:after, #menu .menu #tabs:after, footer:before {
+header:after, #hero .heroContent h2:after, #menu .menu #tabs:after, footer:before {
   overflow: hidden;
   height: 20px;
   background-image: url(../img/keyBorder.png);
@@ -444,15 +444,23 @@ header + * {
   margin-top: 78px;
 }
 
-header img {
+header a {
   height: 80%;
 }
 
-header nav {
+header a img {
+  height: 100%;
+}
+
+header #menuButton {
+  display: none;
+}
+
+header .mainNav {
   width: 300px;
 }
 
-header nav ul {
+header .mainNav ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -470,16 +478,31 @@ header nav ul {
   font-size: 1rem;
 }
 
-header nav ul li a {
+header .mainNav ul li a {
   font-family: "Caesar Dressing", cursive;
   color: #3B65AD;
-  padding: 0 10px;
+  padding: 10px 10px;
   display: inline-block;
 }
 
-header nav ul li a svg {
+header .mainNav ul li a svg {
   width: 20px;
   fill: #3B65AD;
+}
+
+@media screen and (max-width: 750px) {
+  header .mainNav {
+    display: none;
+  }
+  header #menuButton {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    cursor: pointer;
+  }
 }
 
 #hero {
@@ -502,6 +525,7 @@ header nav ul li a svg {
           justify-content: center;
   background-image: url(../img/hero-bg.jpg);
   background-size: cover;
+  background-position: bottom;
 }
 
 #hero img {
@@ -509,7 +533,26 @@ header nav ul li a svg {
   padding: 1rem;
 }
 
-#hero h2 {
+#hero .heroContent {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#hero .heroContent h2 {
   font-family: "Caesar Dressing", cursive;
   color: #3B65AD;
   font-size: 3.25rem;
@@ -518,11 +561,11 @@ header nav ul li a svg {
   margin: 0 0 4.5rem;
 }
 
-#hero h2:first-line {
+#hero .heroContent h2:first-line {
   font-size: 2.5rem;
 }
 
-#hero h2:after {
+#hero .heroContent h2:after {
   content: '';
   display: inline-block;
   width: 50%;
@@ -530,6 +573,22 @@ header nav ul li a svg {
   position: absolute;
   bottom: -3rem;
   left: 25%;
+}
+
+@media screen and (min-width: 750px) {
+  #hero {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #hero img {
+    width: 40%;
+  }
+  #hero .heroContent {
+    width: 450px;
+    margin: 2rem;
+  }
 }
 
 #locations {
@@ -552,39 +611,65 @@ header nav ul li a svg {
           justify-content: center;
   background-color: #F8F8F8;
   background-image: url(../img/column.png);
-  background-size: auto 95%;
+  background-size: auto 80%;
   background-repeat: no-repeat;
   background-position: 70vw;
 }
 
-#locations .card {
+#locations p {
+  max-width: 500px;
+}
+
+#locations .locationContainer {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#locations .locationContainer .card {
   text-align: left;
   background-color: white;
   padding: 1rem 0 0;
-  margin: 1rem 0;
+  margin: 1rem;
   width: 100%;
+  max-width: 400px;
 }
 
-#locations .card h3 {
+#locations .locationContainer .card h3 {
   font-size: 1rem;
   margin: 0 1rem;
 }
 
-#locations .card p {
+#locations .locationContainer .card p {
   font-size: 0.8rem;
   margin: 0 1rem;
 }
 
-#locations .card #hours {
+#locations .locationContainer .card #hours {
   position: relative;
   margin: 0 1rem 0.5rem;
 }
 
-#locations .card #hours span {
+#locations .locationContainer .card #hours span {
   font-size: 0.8rem;
 }
 
-#locations .card #hours ul {
+#locations .locationContainer .card #hours ul {
   font-size: 0.8rem;
   background-color: white;
   display: -webkit-box;
@@ -599,20 +684,20 @@ header nav ul li a svg {
   z-index: 5;
 }
 
-#locations .card #hours ul.inactive {
+#locations .locationContainer .card #hours ul.inactive {
   display: none;
 }
 
-#locations .card #hours ul li {
+#locations .locationContainer .card #hours ul li {
   display: block;
 }
 
-#locations .card iframe {
+#locations .locationContainer .card iframe {
   width: 100%;
   height: 200px;
 }
 
-#locations .card #button {
+#locations .locationContainer .card #button {
   margin: 1rem auto 0;
   width: 100%;
 }
@@ -636,13 +721,14 @@ header nav ul li a svg {
           justify-content: center;
   background-color: #F8F8F8;
   background-image: url(../img/menu-bg.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position-y: bottom;
 }
 
 #menu .menu {
   width: 100%;
+  max-width: 900px;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -735,6 +821,7 @@ header nav ul li a svg {
 
 #menu .menu .locationMenu #menuItems {
   width: 80vw;
+  max-width: 850px;
   height: auto;
   margin: 1rem 0;
   overflow: auto;
