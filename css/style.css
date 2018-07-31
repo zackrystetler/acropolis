@@ -430,6 +430,17 @@ header {
   z-index: 10;
 }
 
+header:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
 header:after {
   content: '';
   position: absolute;
@@ -456,11 +467,11 @@ header #menuButton {
   display: none;
 }
 
-header .mainNav {
+header nav {
   width: 300px;
 }
 
-header .mainNav ul {
+header nav ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,21 +489,52 @@ header .mainNav ul {
   font-size: 1rem;
 }
 
-header .mainNav ul li a {
+header nav ul li a {
   font-family: "Caesar Dressing", cursive;
   color: #3B65AD;
   padding: 10px 10px;
   display: inline-block;
 }
 
-header .mainNav ul li a svg {
+header nav ul li a svg {
   width: 20px;
   fill: #3B65AD;
 }
 
 @media screen and (max-width: 750px) {
-  header .mainNav {
-    display: none;
+  header nav {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    background-color: #3B65AD;
+    left: 0;
+    bottom: 60px;
+    z-index: -2;
+  }
+  header nav.active {
+    bottom: auto;
+    top: 80px;
+  }
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav ul li a {
+    color: white;
+    padding: 1rem;
+  }
+  header nav ul li a svg {
+    width: 20px;
+    fill: white;
   }
   header #menuButton {
     display: inline-block;

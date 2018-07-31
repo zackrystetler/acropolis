@@ -12,22 +12,22 @@ http://htmlpreview.github.io/?https://github.com/zackrystetler/acropolis/blob/ma
 
 ## To-do
 - Initial Design - (4hrs)
-- Build static Web Page
-    [ ] Header
-    [ ] Hero
+- Build static Web Page - (5hrs)
+    [X] Header
+    [X] Hero
     [ ] About us/Our Story
-    [ ] Location/Hours
-    [ ] Menu
+    [X] Location/Hours
+    [X] Menu
     [ ] Instagram Feed
-    [ ] Footer
+    [X] Footer
     [ ] Menu Page
     [ ] Location Page
     [ ] Our Story Page
     [ ] Fav-icon
     [ ] Google statistics tracking
 
-- Javascript Functionality
-    [ ] Smooth Scrolling
+- Javascript Functionality - (1hr)
+    [X] Smooth Scrolling
     [ ] Menu page
     [ ] Google maps API
     [ ] Hours drop down
