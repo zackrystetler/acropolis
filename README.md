@@ -15,22 +15,20 @@ http://htmlpreview.github.io/?https://github.com/zackrystetler/acropolis/blob/ma
 - Build static Web Page - (5hrs)
     [X] Header
     [X] Hero
-    [ ] About us/Our Story
+    [X] About us/Our Story
     [X] Location/Hours
     [X] Menu
     [ ] Instagram Feed
     [X] Footer
     [ ] Menu Page
-    [ ] Location Page
-    [ ] Our Story Page
     [ ] Fav-icon
     [ ] Google statistics tracking
 
-- Javascript Functionality - (1hr)
+- Javascript Functionality - (3hr)
     [X] Smooth Scrolling
-    [ ] Menu page
+    [X] Menu page
     [ ] Google maps API
-    [ ] Hours drop down
+    [X] Hours drop down
     [ ] Instagram API
 
 - Implement Wordpress

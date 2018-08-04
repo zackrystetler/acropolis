@@ -335,7 +335,7 @@ template {
   display: none;
 }
 
-header:after, #locations .locationContainer .card, #locations .locationContainer .card #hours ul, #menu .menu {
+header:after, #locations .locationContainer .card, #menu .menu {
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
@@ -361,6 +361,10 @@ header:after, #hero .heroContent h2:after, #menu .menu #tabs:after, footer:befor
 
 html {
   font-size: 18px;
+}
+
+body {
+  background-color: #F8F8F8;
 }
 
 a {
@@ -633,10 +637,64 @@ header nav ul li a svg {
   }
 }
 
+#ourstory {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 3rem 0 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#ourstory .content {
+  width: 100%;
+  max-width: 500px;
+}
+
+#ourstory p {
+  text-align: left;
+  float: left;
+}
+
+#ourstory img {
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 750px) {
+  #ourstory {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #ourstory img {
+    width: 40%;
+    max-width: 450px;
+  }
+  #ourstory .Content {
+    width: 450px;
+    margin: 2rem;
+  }
+}
+
 #locations {
   width: 100%;
   height: auto;
-  padding: 3rem 1rem;
+  padding: 3rem 0 0;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -689,6 +747,7 @@ header nav ul li a svg {
   padding: 1rem 0 0;
   margin: 1rem;
   width: 100%;
+  height: auto;
   max-width: 400px;
 }
 
@@ -702,17 +761,8 @@ header nav ul li a svg {
   margin: 0 1rem;
 }
 
-#locations .locationContainer .card #hours {
-  position: relative;
-  margin: 0 1rem 0.5rem;
-}
-
-#locations .locationContainer .card #hours span {
-  font-size: 0.8rem;
-}
-
-#locations .locationContainer .card #hours ul {
-  font-size: 0.8rem;
+#locations .locationContainer .card .hours {
+  font-size: 0.6rem;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -721,26 +771,25 @@ header nav ul li a svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0.5rem;
-  position: absolute;
-  z-index: 5;
+  margin: 0.2rem 1rem 1rem;
 }
 
-#locations .locationContainer .card #hours ul.inactive {
-  display: none;
-}
-
-#locations .locationContainer .card #hours ul li {
+#locations .locationContainer .card .hours li {
   display: block;
+}
+
+#locations .locationContainer .card .hours li b {
+  width: 40px;
+  display: inline-block;
 }
 
 #locations .locationContainer .card iframe {
   width: 100%;
-  height: 200px;
+  height: 350px;
 }
 
 #locations .locationContainer .card #button {
-  margin: 1rem auto 0;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -823,11 +872,15 @@ header nav ul li a svg {
   border-bottom: 2px solid currentColor;
 }
 
-#menu .menu .locationMenu.inactive {
+#menu .menu #locationMenu {
   display: none;
 }
 
-#menu .menu .locationMenu #menuSections {
+#menu .menu #locationMenu.active {
+  display: block;
+}
+
+#menu .menu #locationMenu #menuSections {
   margin: 2rem 0 0;
   height: auto;
   padding: 0 0 1rem;
@@ -849,53 +902,53 @@ header nav ul li a svg {
   border-bottom: 1px solid lightgrey;
 }
 
-#menu .menu .locationMenu #menuSections li a {
+#menu .menu #locationMenu #menuSections li a {
   height: auto;
   display: inline-block;
   margin: 0.5rem;
   padding-bottom: 0.25rem;
 }
 
-#menu .menu .locationMenu #menuSections li a.active {
+#menu .menu #locationMenu #menuSections li a.active {
   font-weight: bold;
   border-bottom: 1px solid currentColor;
 }
 
-#menu .menu .locationMenu #menuItems {
+#menu .menu #locationMenu #menuItems {
   width: 80vw;
   max-width: 850px;
   height: auto;
   margin: 1rem 0;
   overflow: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
-#menu .menu .locationMenu #menuItems.inactive {
-  display: none;
+#menu .menu #locationMenu #menuItems.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#menu .menu .locationMenu #menuItems li {
+#menu .menu #locationMenu #menuItems li {
   margin: 0 2rem 2rem 0;
   min-width: 250px;
   text-align: center;
 }
 
-#menu .menu .locationMenu #menuItems li img {
+#menu .menu #locationMenu #menuItems li img {
   width: 100%;
   margin-bottom: 1rem;
 }
 
-#menu .menu .locationMenu #menuItems li span {
+#menu .menu #locationMenu #menuItems li span {
   font-weight: bold;
 }
 
-#menu .menu .locationMenu #menuItems li p {
+#menu .menu #locationMenu #menuItems li p {
   margin: 0.5rem;
 }
 

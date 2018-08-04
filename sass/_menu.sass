@@ -48,9 +48,10 @@
                 &.active
                     border-bottom: 2px solid currentColor
 
-        .locationMenu
-            &.inactive
-                display: none
+        #locationMenu
+            display: none
+            &.active
+                display: block
             
             #menuSections
                 margin: 2rem 0 0
@@ -81,11 +82,11 @@
                 height: auto
                 margin: 1rem 0
                 overflow: auto
-                display: flex
+                display: none
                 flex-direction: row
 
-                &.inactive
-                    display: none
+                &.active
+                    display: flex
 
                 li
                     margin: 0 2rem 2rem 0

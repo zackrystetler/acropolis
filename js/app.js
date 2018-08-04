@@ -1,4 +1,5 @@
-//ig client id=7fcf52f7bdc046bdadad9fdd9b735f25
+//google maps api key = AIzaSyBG216dT96u7KshkH0Udl-jmYMu-QLgaa4
+
 
 //smooth scrolling to anchors
 $('a[href^="#"]').each(function() {
@@ -23,8 +24,30 @@ $('nav').on('click', function() {
     $('nav').removeClass('active');
 })
 
-//clean up map (remove ui)
+//menu functionality
+function activateMenu(menu) {
+    console.log(menu);
+    $('a[href^="'+ menu + '"]').addClass('active').parent().siblings().children().removeClass('active');
+    $('#locationMenu.' + menu).addClass('active').siblings().removeClass('active');
+}
 
-//menu funcktionality
+$('#locations #pressHallCard #button').on('click', function() {
+    activateMenu('pressHallMenu');
+})
 
-//instafeed
+$('#locations #strathmoreCard #button').on('click', function() {
+    activateMenu('strathmoreMenu');
+})
+
+$('#menu #tabs a').on('click', function(e) {
+    e.preventDefault();
+    activateMenu(this.getAttribute('href'));
+})
+
+$('#menuSections a').on('click', function(e) {
+    e.preventDefault();
+    $(this).addClass('active').parent().siblings().children().removeClass('active');
+
+    const section = this.getAttribute('href');
+    $(this).parent().parent().siblings('#menuItems.' + section).addClass('active').siblings().removeClass('active');
+})

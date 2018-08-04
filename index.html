@@ -32,43 +32,46 @@
         </div>
     </section>
 
+    <section id="ourstory">
+        <div class="content">
+            <h2>Our Story</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facilis beatae incidunt provident eveniet? Impedit, maiores? Corporis ipsam voluptatibus debitis, possimus sapiente numquam, voluptate, libero magnam aspernatur quae odit iusto.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facilis beatae incidunt provident eveniet? Impedit, maiores? Corporis ipsam voluptatibus debitis, possimus sapiente numquam, voluptate, libero magnam aspernatur quae odit iusto.</p>
+        </div>
+        <img src="img/storefront.jpg" alt="Storefront">
+    </section>
+
     <section id="locations">
-        <h2>Our Locations</h2>
+        <h2>Locations</h2>
         <p>Boasting two locations serving up the best greek food around, come on by to check us out and grab a bite to eat!</p>
         <div class="locationContainer">
-            <div class="card">
+            <div id="pressHallCard" class="card">
                 <h3>Press Hall</h3>
                 <p>74 Willis St, Wellington</p>
-                <div id="hours">
-                    <span id="today"><b>Today:</b> 10AM - 3PM 	&#9660;</span>
-                    <ul class="inactive">
-                        <li><b>Monday:</b> 10:30AM - 3PM</li>
-                        <li><b>Tuesday:</b> 10:30AM - 3PM</li>
-                        <li><b>Wednesday:</b> 10:30AM - 7PM</li>
-                        <li><b>Thursday:</b> 10:30AM - 7PM</li>
-                        <li><b>Friday:</b> 10:30AM - 7PM</li>
-                        <li><b>Saturday:</b> 10AM - 3PM</li>
-                        <li><b>Sunday:</b> Closed</li>
-                    </ul>
-                </div>
-                <iframe frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ85g7dtavOG0Re48GpM2BKBs&key=AIzaSyBG216dT96u7KshkH0Udl-jmYMu-QLgaa4" allowfullscreen></iframe>
+                <ul class="hours">
+                    <li><b>Mon</b> 10:30AM - 3PM</li>
+                    <li><b>Tue</b> 10:30AM - 3PM</li>
+                    <li><b>Wed</b> 10:30AM - 7PM</li>
+                    <li><b>Thur</b> 10:30AM - 7PM</li>
+                    <li><b>Fri</b> 10:30AM - 7PM</li>
+                    <li><b>Sat</b> 10AM - 3PM</li>
+                    <li><b>Sun</b> Closed</li>
+                </ul>
+                <iframe frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ85g7dtavOG0Re48GpM2BKBs&key=AIzaSyBG216dT96u7KshkH0Udl-jmYMu-QLgaa4"></iframe>
                 <a id="button" href="#menu">Press Hall Menu</a>
             </div>
-            <div class="card">
+            <div id="strathmoreCard" class="card">
                 <h3>Strathmore</h3>
                 <p>508 Broadway, Strathmore Park</p>
-                <div id="hours">
-                    <span id="today"><b>Today:</b> 10AM - 3PM 	&#9660;</span>
-                    <ul class="inactive">
-                        <li><b>Monday:</b> 10:30AM - 3PM</li>
-                        <li><b>Tuesday:</b> 10:30AM - 3PM</li>
-                        <li><b>Wednesday:</b> 10:30AM - 7PM</li>
-                        <li><b>Thursday:</b> 10:30AM - 7PM</li>
-                        <li><b>Friday:</b> 10:30AM - 7PM</li>
-                        <li><b>Saturday:</b> 10AM - 3PM</li>
-                        <li><b>Sunday:</b> Closed</li>
-                    </ul>
-                </div>
+                <ul class="hours">
+                    <li><b>Mon</b> 10:30AM - 3PM</li>
+                    <li><b>Tue</b> 10:30AM - 3PM</li>
+                    <li><b>Wed</b> 10:30AM - 7PM</li>
+                    <li><b>Thur</b> 10:30AM - 7PM</li>
+                    <li><b>Fri</b> 10:30AM - 7PM</li>
+                    <li><b>Sat</b> 10AM - 3PM</li>
+                    <li><b>Sun</b> Closed</li>
+                </ul>
                 <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJDy9V8H2vOG0RVM0TgFGjWJY&key=AIzaSyBG216dT96u7KshkH0Udl-jmYMu-QLgaa4"></iframe>
                 <a id="button" href="#menu">Strathmore Menu</a>
             </div>
@@ -78,17 +81,17 @@
     <section id="menu">
         <div class="menu">
             <ul id="tabs">
-                <li><a class="active" href="">Press Hall</a></li>
-                <li><a href="">Strathmore</a></li>
+                <li><a class="active" href="pressHallMenu">Press Hall</a></li>
+                <li><a href="strathmoreMenu">Strathmore</a></li>
             </ul>
-            <div id="pressHallMenu" class="locationMenu">
+            <div id="locationMenu" class="pressHallMenu active">
                 <ul id="menuSections">
-                    <li><a class="active" href="">Souvlaki</a></li>
-                    <li><a href="">Burgers</a></li>
-                    <li><a href="">Salads</a></li>
-                    <li><a href="">Sides</a></li>
+                    <li><a class="active" href="souvlaki">Souvlaki</a></li>
+                    <li><a href="burgers">Burgers</a></li>
+                    <li><a href="salads">Salads</a></li>
+                    <li><a href="sides">Sides</a></li>
                 </ul>
-                <ul id="menuItems" class="souvlaki">
+                <ul id="menuItems" class="souvlaki active">
                     <li>
                         <img src="img/souvlaki.jpg" alt="Chicken Souvlaki">
                         <span>Chicken</span>
@@ -109,6 +112,82 @@
                         <span>Chicken</span>
                         <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
                     </li>
+                </ul>
+                <ul id="menuItems" class="burgers">
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Greek Burger">
+                        <span>Greek Burger</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Acropolis Burger">
+                        <span>Acropolis Burger</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Chicken Haloumi Burger">
+                        <span>Chicken Haloumi Burger</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Greek Burger">
+                        <span>Greek Burger</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                </ul>
+                <ul id="menuItems" class="salads">
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Chicken Haloumi Salad">
+                        <span>Chicken Haloumi Salad</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Greek Salad">
+                        <span>Greek Salad</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Chicken Haloumi Salad">
+                        <span>Chicken Haloumi Salad</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Greek Salad">
+                        <span>Greek Salad</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                </ul>
+                <ul id="menuItems" class="sides">
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Hot Chips">
+                        <span>Hot Chips</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Haloumi">
+                        <span>Haloumi</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Extra Skewer">
+                        <span>Extra Skewer</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Haloumi">
+                        <span>Haloumi</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="locationMenu" class="strathmoreMenu">
+                <ul id="menuSections">
+                    <li><a class="active" href="souvlaki">Souvlaki</a></li>
+                    <li><a href="burgers">Burgers</a></li>
+                    <li><a href="salads">Salads</a></li>
+                    <li><a href="fish">Fish</a></li>
+                </ul>
+                <ul id="menuItems" class="souvlaki active">
                     <li>
                         <img src="img/souvlaki.jpg" alt="Chicken Souvlaki">
                         <span>Chicken</span>
@@ -117,16 +196,88 @@
                     <li>
                         <img src="img/souvlaki.jpg" alt="Chicken Souvlaki">
                         <span>Chicken</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Chicken Souvlaki">
+                        <span>Chicken</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Chicken Souvlaki">
+                        <span>Chicken</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                </ul>
+                <ul id="menuItems" class="burgers">
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Greek Burger">
+                        <span>Greek Burger</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Acropolis Burger">
+                        <span>Acropolis Burger</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Chicken Haloumi Burger">
+                        <span>Chicken Haloumi Burger</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Greek Burger">
+                        <span>Greek Burger</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                </ul>
+                <ul id="menuItems" class="salads">
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Chicken Haloumi Salad">
+                        <span>Chicken Haloumi Salad</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Greek Salad">
+                        <span>Greek Salad</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Chicken Haloumi Salad">
+                        <span>Chicken Haloumi Salad</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Greek Salad">
+                        <span>Greek Salad</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                </ul>
+                <ul id="menuItems" class="fish">
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Hot Chips">
+                        <span>Hot Chips</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Haloumi">
+                        <span>Haloumi</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Extra Skewer">
+                        <span>Extra Skewer</span>
+                        <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
+                    </li>
+                    <li>
+                        <img src="img/souvlaki.jpg" alt="Haloumi">
+                        <span>Haloumi</span>
                         <p>Chicken Grilled, Marinated chicken skewers,  tomato, lettuce, onions and tzatziki wrapped in a fresh flour pita.</p>
                     </li>
                 </ul>
             </div>
             <a id="button" href="">View Full Menu</a>
         </div>
-    </section>
-
-    <section>
-        <!-- instafeed -->
     </section>
 
     <footer>
