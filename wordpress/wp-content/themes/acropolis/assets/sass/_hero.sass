@@ -1,0 +1,62 @@
+#hero
+    width: 100%
+    height: auto
+    padding: 0 1rem 2rem
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-image: url(assets/img/hero-bg.jpg)
+    background-size: cover
+    background-position: bottom
+    
+
+    img
+        width: 100%
+        max-width: 400px
+        height: auto
+        padding: 1rem
+
+    .heroContent
+        width: 100%
+        max-width: 500px
+        height: auto
+        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        h2
+            font-family: $primary-font
+            color: $primary-colour
+            font-size: 3.25rem
+            position: relative
+            line-height: 2.5rem
+            margin: 0 0 4.5rem
+
+            &:first-line
+                font-size: 2.5rem
+            
+            &:after
+                content: ''
+                display: inline-block
+                width: 50%
+                height: 20px
+                position: absolute
+                bottom: -3rem
+                left: 50%-25%
+                @extend %greek-border
+
+@media screen and (min-width: 750px)
+    #hero
+        flex-direction: row
+
+        img
+            width: 40%
+
+        .heroContent
+            width: 450px
+            margin: 2rem
+    

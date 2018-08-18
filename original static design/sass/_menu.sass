@@ -1,0 +1,107 @@
+#menu
+    width: 100%
+    height: auto
+    padding: 3rem 1rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: $off-white
+    background-image: url(../img/menu-bg.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center bottom
+
+    .menu
+        margin: 1rem
+        width: 100%
+        max-width: 900px
+        background-color: white
+        @extend %box-shadow
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        #tabs
+            width: 100%
+            height: 60px
+            background-color: $primary-colour
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            align-items: center
+            position: relative
+            &:after
+                content: ''
+                position: absolute
+                left: 0
+                bottom: -20px
+                width: 100%
+                @extend %greek-border
+                border-bottom: solid 2px $primary-colour
+                background-color: white
+
+            li a
+                color: white
+                font-family: $primary-font
+                padding-bottom: 0.25rem
+
+                &.active
+                    border-bottom: 2px solid currentColor
+
+        #locationMenu
+            display: none
+            &.active
+                display: block
+            
+            #menuSections
+                margin: 2rem 0 0
+                height: auto
+                padding: 0 0 1rem
+                display: flex
+                flex-direction: row
+                justify-content: center
+                align-items: center
+                flex-wrap: wrap
+                border-bottom: 1px solid lightgrey
+
+
+                li a
+                    height: auto
+                    display: inline-block
+                    margin: 0.5rem
+                    padding-bottom: 0.25rem
+                    
+                    &.active
+                        font-weight: bold
+                        border-bottom: 1px solid currentColor
+
+
+            #menuItems
+                width: 80vw
+                max-width: 850px
+                height: auto
+                margin: 1rem 0
+                overflow: auto
+                display: none
+                flex-direction: row
+
+                &.active
+                    display: flex
+
+                li
+                    margin: 0 2rem 2rem 0
+                    min-width: 250px
+                    text-align: center
+
+                    img
+                        width: 100%
+                        margin-bottom: 1rem
+                    span
+                        font-weight: bold
+
+                    p
+                        margin: 0.5rem
+
+        #button
+            margin: 1rem

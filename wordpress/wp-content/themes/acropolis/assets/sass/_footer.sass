@@ -1,0 +1,28 @@
+footer
+    width: 100%
+    min-height: 50px
+    background-color: $primary-colour
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    span
+        color: white
+        font-family: $secondary-font
+        font-size: 0.8rem
+        opacity: 0.4
+        text-align: center
+        padding: 1rem
+
+    
+
+    &:before
+        content: ''
+        position: absolute
+        top: -20px
+        left: 0
+        width: 100%
+        @extend %greek-border
+        background-color: white

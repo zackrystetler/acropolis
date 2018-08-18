@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css?family=Caesar+Dressing|Open+Sans:300,700')
+
+$primary-font: 'Caesar Dressing', cursive;
+$secondary-font: 'Open Sans', sans-serif;
+$primary-colour: #3B65AD
+$secondary-colour: #4D4D4D
+$off-white: #F8F8F8
+$header-height: 60px
+
+%box-shadow
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2)
+%greek-border
+    overflow: hidden
+    height: 20px
+    background-image: url(assets/img/keyBorder.png)
+    background-position-y: bottom
+    background-size: 15px
+    background-repeat: repeat-x
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    color: $secondary-colour
+    font-family: $secondary-font
+    font-weight: thin
+
+html
+    font-size: 18px
+
+body
+    background-color: $off-white
+a
+    text-decoration: none
+    color: inherit
+
+ul
+    list-style: none
+
+h2
+    font-family: $primary-font
+    color: $primary-colour
+
+h3
+    font-family: $secondary-font
+    font-weight: bold
+    font-size: 1.5rem
+
+p
+    margin: 1rem
+    line-height: 1.3rem
+
+#button
+    width: 10rem
+    height: 2.5rem
+    background-color: $primary-colour
+    color: white
+    font-family: $primary-font
+    display: flex
+    align-items: center
+    justify-content: center
