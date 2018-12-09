@@ -2,6 +2,14 @@
 
 add_theme_support( 'menus' );
 add_theme_support( 'post-thumbnails' );
+// Remove Gallery Styling
+add_filter( 'gallery_style', 'my_gallery_style', 99 );
+
+function my_gallery_style() {
+    return "";
+}
+
+add_filter( 'use_default_gallery_style', '__return_false' );
 
 function register_theme_menus() {
 

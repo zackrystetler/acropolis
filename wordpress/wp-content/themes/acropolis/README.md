@@ -20,7 +20,7 @@ http://htmlpreview.github.io/?https://github.com/zackrystetler/acropolis/blob/ma
     [X] Menu
     [ ] Instagram Feed
     [X] Footer
-    [ ] Menu Page
+    [X] Menu Page
     [X] Fav-icon
     [ ] Google statistics tracking
 
@@ -53,6 +53,10 @@ http://htmlpreview.github.io/?https://github.com/zackrystetler/acropolis/blob/ma
                 [X] Burgers
                 [X] Meals
                 [X] Salads
+
+## Tweaks
+- Make menu links link to PDF menus (customizable via wordpress)
+- Make current "Menu" section a "popular items" section using images and some hover effect.
 
 
 ## Authors

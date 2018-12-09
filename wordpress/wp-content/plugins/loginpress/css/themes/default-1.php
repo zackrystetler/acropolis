@@ -65,6 +65,10 @@ function first_presets() {
     	padding-left: 27px;
     	font-weight: normal;
     }
+    #​jetpack_protect_answer{
+      padding-left: 0;
+      text-align : center;
+    }
     .login input[type="submit"] {
     	background: #fff;
     	color: #fff;
@@ -255,7 +259,7 @@ function first_presets() {
     }
     .loginpress-show-love a:hover{
       color: #4d5d95;
-    }
+	}
     @media screen and (max-width: 767px) {
         #login{
             width: 300px;

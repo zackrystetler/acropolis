@@ -1,0 +1,51 @@
+#gallery
+    padding: 0
+    .gallery
+        margin: 0 auto
+        display: grid
+        grid-template-columns: 1fr
+        grid-gap: 0px
+
+        li
+            margin: 0
+            width: 100%
+            max-width: 500px
+
+            figure
+                overflow: hidden
+                img
+                    min-height: 300px
+                    width: 100%
+                figcaption
+                    width: 100%
+                    font-family: $secondary-font
+                    font-weight: bold
+                    font-size: 1.5rem
+                    margin: 1rem auto
+                    padding-bottom: 1rem
+                    padding-top: 1rem
+                    padding-left: 1rem
+                    padding-right: 1rem
+                    background: none
+                    text-shadow: 0 2px 1px rgba(0,0,0,0.7)
+
+
+@media screen and (min-width: 500px)
+    #gallery
+        .gallery
+            grid-template-columns: 1fr 1fr
+            max-width: 1000px
+            grid-gap: 0.5rem
+            margin: 1rem auto
+
+            li
+                &:last-child:nth-child(odd)
+                    grid-column: 1 / span 2
+                    max-width: none
+                    max-height: 400px
+
+                figure
+                    img
+
+                    figcaption
+                        font-size: 1.5rem

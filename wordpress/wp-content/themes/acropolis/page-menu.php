@@ -51,7 +51,7 @@ get_header('page'); ?>
                     ?>
                 </ul>
                 <h2>Burgers</h2>
-                <p class="tagline">All burgers are in a toasted brioche bun</p>
+                <p class="tagline">All burgers are in a toasted brioche bun!</p>
                 <ul class="menuItems">
 
                     <?php
@@ -77,6 +77,8 @@ get_header('page'); ?>
                         } //endif
                     ?>
                 </ul>
+                <h2>Other</h2>
+                <p class="tagline">Delicious sides and extras!</p>
                 <ul class="menuItems">
                     <?php
                         //set find parameters
@@ -106,6 +108,8 @@ get_header('page'); ?>
         </div>
         <div id="locationMenu" class="strathmoreMenu">
             <div class="menuContent">
+                <h2>Authentic Greek Souvlaki</h2>
+                <p class="tagline">We handcraft our authentic Greek pita bread daily!</p>
                 <ul class="menuItems">
                     <?php
                         //set find parameters
@@ -183,31 +187,7 @@ get_header('page'); ?>
                         //set find parameters
                         $params = array( 'orderby' => 'date asc',
                                         'limit' => -1,
-                                        'where' => 'item_type.name="side"');
-                        //get pods object
-                        $card = pods( 'strathmore_menu', $params );
-                        //loop through records
-                        if ( $card->total() > 0 ) {
-                        while ( $card->fetch() ) {
-                        //Put field values into variables
-                        $title = $card->display('title');
-                        $description = $card->display('content');
-                        ?>
-                            <li>
-                                <span><?php echo $title; ?></span>
-                                <p><?php echo $description; ?></p>
-                            </li>
-                        <?php
-                                } //endwhile
-                            } //endif
-                    ?>
-                </ul>
-                <ul class="menuItems">
-                    <?php
-                        //set find parameters
-                        $params = array( 'orderby' => 'date asc',
-                                        'limit' => -1,
-                                        'where' => 'item_type.name="fish"');
+                                        'where' => 'item_type.name="other"');
                         //get pods object
                         $card = pods( 'strathmore_menu', $params );
                         //loop through records

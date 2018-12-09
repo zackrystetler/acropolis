@@ -25,6 +25,7 @@ class LoginPress_Log_Info {
 		$customization 			 = isset( $loginpress_config ) ? print_r( $loginpress_config, true ) : 'No customization yet';
 		$lostpassword_url 	 = isset( $loginpress_setting['lostpassword_url'] ) ? $loginpress_setting['lostpassword_url'] : 'off';
 		$_loginpassword_url  = ( $lostpassword_url == 'on' ) ? 'WordPress Default' : "WooCommerce Custom URL";
+		$loginpress_uninstall= isset( $loginpress_setting['loginpress_uninstall'] ) ? $loginpress_setting['loginpress_uninstall'] : 'off';
 
 		$html = '### Begin System Info ###' . "\n\n";
 
@@ -47,6 +48,7 @@ class LoginPress_Log_Info {
 		if ( class_exists( 'WooCommerce' ) ) {
 		$html .= 'Lost Password URL:        ' . $_loginpassword_url . "\n";
 		}
+		$html .= 'Uninstallation:       	  ' . $loginpress_uninstall . "\n";
 		$html .= 'Total Customized Fields:  ' . count( $loginpress_config ) . "\n";
 		$html .= 'Customization Detail:     ' . $customization . "\n";
 
@@ -96,6 +98,14 @@ class LoginPress_Log_Info {
 		$html .= 'Time Limit:               ' . ini_get( 'max_execution_time' ) . "\n";
 		$html .= 'Max Input Vars:           ' . ini_get( 'max_input_vars' ) . "\n";
 		$html .= 'Display Errors:           ' . ( ini_get( 'display_errors' ) ? 'On (' . ini_get( 'display_errors' ) . ')' : 'N/A' ) . "\n";
+
+		// WordPress active themes
+		$html .= "\n" . '-- WordPress Active Theme --' . "\n\n";
+		$my_theme = wp_get_theme();
+		$html .= 'Name:                     ' . $my_theme->get( 'Name' ) . "\n";
+		$html .= 'URI:                      ' . $my_theme->get( 'ThemeURI' ) . "\n";
+		$html .= 'Author:                   ' . $my_theme->get( 'Author' ) . "\n";
+		$html .= 'Version:                  ' . $my_theme->get( 'Version' ) . "\n";
 
 		// WordPress active plugins
 		$html .= "\n" . '-- WordPress Active Plugins --' . "\n\n";

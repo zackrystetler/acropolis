@@ -11,7 +11,7 @@
 
     <header>
         <a href="#top"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logoText.svg" alt="Souvlaki At Acropolis"></a>
-        <img id="menuButton" src="<?php echo get_template_directory_uri(); ?>/assets/img/menuicon.svg" alt="Menu Button">
+        <img id="menuButton" src="<?php echo get_template_directory_uri(); ?>/assets/img/menuIcon.svg" alt="Menu Button">
         <nav>
             <?php
 

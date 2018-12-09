@@ -1225,7 +1225,10 @@ jQuery(document).ready(function($) {
       }
     });
   });
-
+  /**
+   * @since 1.0.9
+   * @version 1.0.12
+   */
   $(window).on('load', function() {
 
     if ( $('#customize-control-loginpress_customization-setting_logo_display input[type="checkbox"]').is(":checked") ) {
@@ -1255,8 +1258,10 @@ jQuery(document).ready(function($) {
 
     if ( $('#customize-control-loginpress_customization-setting_form_display_bg input[type="checkbox"]').is(":checked") ) {
       $('#customize-control-loginpress_customization-form_background_color').css( 'display', 'none' );
+      $('#customize-control-loginpress_customization-setting_form_background').css( 'display', 'none' );
     } else {
       $('#customize-control-loginpress_customization-form_background_color').css( 'display', 'list-item' );
+      $('#customize-control-loginpress_customization-setting_form_background').css( 'display', 'list-item' );
     }
 
     if ( $('#customize-control-loginpress_customization-footer_display_text input[type="checkbox"]').is(":checked") ) {

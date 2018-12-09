@@ -217,22 +217,22 @@ class LoginPress_Entities {
   */
   public function customize_login_panel( $wp_customize ) {
 
-    include LOGINPRESS_ROOT_PATH .'classes/control-presets.php';
+    include LOGINPRESS_ROOT_PATH . 'classes/control-presets.php';
 
-    include LOGINPRESS_ROOT_PATH .'classes/controls/background-gallery.php';
+    include LOGINPRESS_ROOT_PATH . 'classes/controls/background-gallery.php';
 
-    include LOGINPRESS_ROOT_PATH .'classes/controls/range.php';
+    include LOGINPRESS_ROOT_PATH . 'classes/controls/range.php';
 
-    include LOGINPRESS_ROOT_PATH .'classes/controls/group.php';
+    include LOGINPRESS_ROOT_PATH . 'classes/controls/group.php';
 
-    include LOGINPRESS_ROOT_PATH .'classes/controls/radio-button.php';
+    include LOGINPRESS_ROOT_PATH . 'classes/controls/radio-button.php';
 
-    include LOGINPRESS_ROOT_PATH .'classes/controls/miscellaneous.php';
+    include LOGINPRESS_ROOT_PATH . 'classes/controls/miscellaneous.php';
 
-    include LOGINPRESS_ROOT_PATH .'include/customizer-strings.php';
+    include LOGINPRESS_ROOT_PATH . 'include/customizer-strings.php';
 
     if ( ! has_action( 'loginpress_pro_add_template' ) ) :
-      include LOGINPRESS_ROOT_PATH .'classes/class-loginpress-promo.php';
+      include LOGINPRESS_ROOT_PATH . 'classes/class-loginpress-promo.php';
     endif;
 
     //	=============================
@@ -331,7 +331,7 @@ class LoginPress_Entities {
     $wp_customize->add_section( 'customize_logo_section', array(
       'title'				 => __( 'Logo', 'loginpress' ),
       'description'	 => __( 'Customize Your Logo Section', 'loginpress' ),
-      'priority'			=> 5,
+      'priority'		 => 5,
       'panel'				 => 'loginpress_panel',
     ) );
 
@@ -351,14 +351,14 @@ class LoginPress_Entities {
       'settings'    => 'loginpress_customization[setting_logo_display]',
    		'label'	      => __( 'Disable Logo:', 'loginpress'),
    		'section'     => 'customize_logo_section',
-      'priority'	=> 4,
-   		'type'        => 'ios',// light, ios, flat
+      'priority'	  => 4,
+   		'type'        => 'ios', // light, ios, flat
      ) ) );
 
     $wp_customize->add_setting( 'loginpress_customization[setting_logo]', array(
       'type'					=> 'option',
       'capability'		=> 'manage_options',
-      'transport'      => 'postMessage'
+      'transport'     => 'postMessage'
     ) );
 
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'loginpress_customization[setting_logo]', array(

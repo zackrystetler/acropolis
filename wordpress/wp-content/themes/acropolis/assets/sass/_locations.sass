@@ -1,13 +1,13 @@
 #locations
     width: 100%
     height: auto
-    padding: 3rem 0 0
+    padding: 3rem 0
     text-align: center
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
-    background-color: $off-white
+    background-color: white
     background-image: url(assets/img/column.png)
     background-size: auto 80%
     background-repeat: no-repeat
@@ -36,10 +36,11 @@
             width: 100%
             height: auto
             max-width: 400px
+            position: relative
 
             h3
                 font-size: 1rem
-                margin: 0 1rem
+                margin: 1rem 1rem 0
             p
                 font-size: 0.8rem
                 margin: 0 1rem
@@ -64,5 +65,14 @@
             #button
                 margin: 0 auto
                 width: 100%
+
+            &:before
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                @extend %greek-border
+                background-color: white
 
     
