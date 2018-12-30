@@ -68,6 +68,48 @@ get_header(); ?>
     </div>
 </section>
 
+<section id="review">
+    <div class="reviewContainer fade">
+        <?php
+        // query for the loations page
+        $your_query = new WP_Query( 'pagename=reviews' );
+        // "loop" through query (even though it's just one page) 
+        while ( $your_query->have_posts() ) : $your_query->the_post(); ?>
+        <div><?php the_content(); ?></div>    
+        <?php endwhile;
+            // reset post data (important!)
+            wp_reset_postdata();
+        ?> 
+        <ul class="sliderContainer">
+        <?php
+            //set find parameters
+            $params = array( 'limit' => -1);
+            //get pods object
+            $card = pods( 'reviews', $params );
+            //loop through records
+            if ( $card->total() > 0 ) {
+                while ( $card->fetch() ) {
+                //Put field values into variables
+                $title = $card->display('title');
+                $content = $card->display('post_content');
+                ?>
+
+                    <li class="reviewItem">
+                        <div class="reviewCard">
+                            <p><?php echo $title; ?></p>
+                            <span><?php echo $content; ?></span>
+                        </div>
+                    </li>
+                    <?php
+                } //endwhile
+            } //endif
+        ?>  
+        </ul>
+    </div>
+
+
+</section>
+
 <section id="gallery">
     <?php
         // query for the gallery page
@@ -80,7 +122,7 @@ get_header(); ?>
         wp_reset_postdata(); ?>
 </section>
 
-<section id="ourstory">
+<!-- <section id="ourstory">
     <div class="content fade">
     <?php
         // query for the our story page
@@ -94,214 +136,10 @@ get_header(); ?>
         // reset post data (important!)
         wp_reset_postdata();
     ?>    
-</section>
-
-<!-- <section id="menu">
-    <h2>Menu</h2>
-    <div class="menu fade">
-        <ul id="tabs">
-            <li><a class="active" href="#pressHallMenu">Press Hall</a></li>
-            <li><a href="#strathmoreMenu">Strathmore</a></li>
-        </ul>
-        <div id="locationMenu" class="pressHallMenu active">
-            <div class="menuContent">
-                <ul class="menuItems">
-                    <?php
-                    //set find parameters
-                    $params = array( 'orderby' => 'date asc',
-                                    'limit' => -1,
-                                    'where' => 'item_type.name="souvlaki"');
-                    //get pods object
-                    $card = pods( 'press_hall_menu', $params );
-                    //loop through records
-                    if ( $card->total() > 0 ) {
-                    while ( $card->fetch() ) {
-                    //Put field values into variables
-                    $title = $card->display('title');
-                    $description = $card->display('content');
-                    ?>
-                        <li>
-                            <span><?php echo $title; ?></span>
-                            <p><?php echo $description; ?></p>
-                        </li>
-                    <?php
-                            } //endwhile
-                        } //endif
-                    ?>
-
-                    <?php
-                    //set find parameters
-                    $params = array( 'orderby' => 'date asc',
-                                    'limit' => -1,
-                                    'where' => 'item_type.name="burger"');
-                    //get pods object
-                    $card = pods( 'press_hall_menu', $params );
-                    //loop through records
-                    if ( $card->total() > 0 ) {
-                    while ( $card->fetch() ) {
-                    //Put field values into variables
-                    $title = $card->display('title');
-                    $description = $card->display('content');
-                    ?>
-                        <li>
-                            <span><?php echo $title; ?></span>
-                            <p><?php echo $description; ?></p>
-                        </li>
-                    <?php
-                            } //endwhile
-                        } //endif
-                    ?>
-                    
-                    <?php
-                        //set find parameters
-                        $params = array( 'orderby' => 'date asc',
-                                        'limit' => -1,
-                                        'where' => 'item_type.name="other"');
-                        //get pods object
-                        $card = pods( 'press_hall_menu', $params );
-                        //loop through records
-                        if ( $card->total() > 0 ) {
-                        while ( $card->fetch() ) {
-                        //Put field values into variables
-                        $title = $card->display('title');
-                        $description = $card->display('content');
-                        ?>
-                            <li>
-                                <span><?php echo $title; ?></span>
-                                <p><?php echo $description; ?></p>
-                            </li>
-                        <?php
-                                } //endwhile
-                            } //endif
-                        ?>
-                    
-                </ul>
-            </div>
-        </div>
-        <div id="locationMenu" class="strathmoreMenu">
-            <div class="menuContent">
-            <ul class="menuItems active">
-                <?php
-                    //set find parameters
-                    $params = array( 'orderby' => 'date asc',
-                                    'limit' => -1,
-                                    'where' => 'item_type.name="souvlaki"');
-                    //get pods object
-                    $card = pods( 'strathmore_menu', $params );
-                    //loop through records
-                    if ( $card->total() > 0 ) {
-                    while ( $card->fetch() ) {
-                    //Put field values into variables
-                    $title = $card->display('title');
-                    $description = $card->display('content');
-                    ?>
-                        <li>
-                            <span><?php echo $title; ?></span>
-                            <p><?php echo $description; ?></p>
-                        </li>
-                    <?php
-                            } //endwhile
-                        } //endif
-                ?>
-                <?php
-                    //set find parameters
-                    $params = array( 'orderby' => 'date asc',
-                                    'limit' => -1,
-                                    'where' => 'item_type.name="burger"');
-                    //get pods object
-                    $card = pods( 'strathmore_menu', $params );
-                    //loop through records
-                    if ( $card->total() > 0 ) {
-                    while ( $card->fetch() ) {
-                    //Put field values into variables
-                    $title = $card->display('title');
-                    $description = $card->display('content');
-                    ?>
-                        <li>
-                            <span><?php echo $title; ?></span>
-                            <p><?php echo $description; ?></p>
-                        </li>
-                    <?php
-                            } //endwhile
-                        } //endif
-                ?>
-                <?php
-                    //set find parameters
-                    $params = array( 'orderby' => 'date asc',
-                                    'limit' => -1,
-                                    'where' => 'item_type.name="salad"');
-                    //get pods object
-                    $card = pods( 'strathmore_menu', $params );
-                    //loop through records
-                    if ( $card->total() > 0 ) {
-                    while ( $card->fetch() ) {
-                    //Put field values into variables
-                    $title = $card->display('title');
-                    $description = $card->display('content');
-                    ?>
-                        <li>
-                            <span><?php echo $title; ?></span>
-                            <p><?php echo $description; ?></p>
-                        </li>
-                    <?php
-                            } //endwhile
-                        } //endif
-                ?>
-                
-                <?php
-                    //set find parameters
-                    $params = array( 'orderby' => 'date asc',
-                                    'limit' => -1,
-                                    'where' => 'item_type.name="side"');
-                    //get pods object
-                    $card = pods( 'strathmore_menu', $params );
-                    //loop through records
-                    if ( $card->total() > 0 ) {
-                    while ( $card->fetch() ) {
-                    //Put field values into variables
-                    $title = $card->display('title');
-                    $description = $card->display('content');
-                    ?>
-                        <li>
-                            <span><?php echo $title; ?></span>
-                            <p><?php echo $description; ?></p>
-                        </li>
-                    <?php
-                            } //endwhile
-                        } //endif
-                ?>
-            
-                <?php
-                    //set find parameters
-                    $params = array( 'orderby' => 'date asc',
-                                    'limit' => -1,
-                                    'where' => 'item_type.name="fish"');
-                    //get pods object
-                    $card = pods( 'strathmore_menu', $params );
-                    //loop through records
-                    if ( $card->total() > 0 ) {
-                    while ( $card->fetch() ) {
-                    //Put field values into variables
-                    $title = $card->display('title');
-                    $description = $card->display('content');
-                    ?>
-                        <li>
-                            <span><?php echo $title; ?></span>
-                            <p><?php echo $description; ?></p>
-                        </li>
-                    <?php
-                            } //endwhile
-                        } //endif
-                ?>
-                
-            </ul>
-        </div>
-    </div>
-    <a id="button" href="menu">View Full Menu</a>
 </section> -->
 
 <section id="catering">
-<?php
+    <?php
         // query for the catering page
         $your_query = new WP_Query( 'pagename=catering' );
         // "loop" through query (even though it's just one page) 
@@ -314,7 +152,7 @@ get_header(); ?>
 </section>
 
 <section id="photos">
-<?php
+    <?php
         // query for the photos page
         $your_query = new WP_Query( 'pagename=photos' );
         // "loop" through query (even though it's just one page) 
